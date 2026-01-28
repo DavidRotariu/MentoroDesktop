@@ -48,25 +48,25 @@ export default function Home() {
                 {/* Navigation Links */}
                 <nav className="flex items-center gap-16">
                   <Link
-                    href="#home"
+                    href="/"
                     className="text-xl text-primary patrick-hand-regular hover:text-accent transition-colors"
                   >
                     Home
                   </Link>
                   <Link
-                    href="#servicii"
+                    href="/servicii"
                     className="text-xl text-primary patrick-hand-regular hover:text-accent transition-colors"
                   >
                     Servicii
                   </Link>
                   <Link
-                    href="#planuri"
+                    href="/planuri"
                     className="text-xl text-primary patrick-hand-regular hover:text-accent transition-colors"
                   >
                     Planuri
                   </Link>
                   <Link
-                    href="#contact"
+                    href="/contact"
                     className="text-xl text-primary patrick-hand-regular hover:text-accent transition-colors"
                   >
                     Contact
@@ -104,11 +104,21 @@ export default function Home() {
                     </p>
                   </div>
 
-                  {/* CTA Button */}
-                  <button className="px-6 py-3 bg-accent text-white rounded-xl montserrat-regular text-lg hover:opacity-90 transition-opacity flex items-center gap-2">
-                    <Download className="w-5 h-5" />
-                    Descarcă aplicația
-                  </button>
+                  {/* CTA Buttons */}
+                  <div className="flex items-stretch gap-4">
+                    <button className="px-6 py-3 bg-accent text-white rounded-xl montserrat-regular text-lg hover:opacity-90 transition-opacity flex flex-col items-center justify-center gap-2">
+                      <span>Aplicatie web</span>
+                      <span className="text-xs">Lansat!</span>
+                    </button>
+                    <button className="px-6 py-3 bg-white/20 border-2 border-accent text-accent rounded-xl montserrat-regular text-lg hover:bg-white/30 transition-colors flex flex-col items-center justify-center gap-1">
+                      <span>Aplicatie Android</span>
+                      <span className="text-xs">Curand...</span>
+                    </button>
+                    <button className="px-6 py-3 bg-white/20 border-2 border-accent text-accent rounded-xl montserrat-regular text-lg hover:bg-white/30 transition-colors flex flex-col items-center justify-center gap-1">
+                      <span>iOS Aplicatie</span>
+                      <span className="text-xs">Curand...</span>
+                    </button>
+                  </div>
                 </div>
 
                 {/* Right side - Phone image */}
@@ -247,7 +257,8 @@ export default function Home() {
                   </button>
                   <ul className="space-y-2 text-accent text-sm montserrat-regular">
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4" />5 elevi
+                      <CheckCircle className="w-4 h-4" />
+                      10 elevi
                     </li>
                     <li className="flex items-center gap-2">
                       <XCircle className="w-4 h-4" />
