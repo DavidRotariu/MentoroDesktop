@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary: #16515f;
+  --secondary: #d8f1f1;
+  --accent: #2a99b4;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.patrick-hand-regular {
+  font-family: "Patrick Hand", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.patrick-hand-sidebar {
+  font-family: "Patrick Hand", cursive;
+  font-weight: 400;
+}
+
+.montserrat-regular {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* === FullCalendar Theme: White bg + Primary text/borders === */
+.fc {
+  --fc-bg-color: #ffffff; /* page is white */
+  --fc-border-color: var(--primary);
+  --fc-today-bg-color: rgba(22, 81, 95, 0.08);
+  --fc-neutral-bg-color: #ffffff;
+  --fc-neutral-text-color: var(--primary);
+  --fc-event-bg-color: var(--primary);
+  --fc-event-border-color: var(--primary);
+  --fc-event-text-color: #ffffff;
+}
+
+/* Toolbar */
+.fc .fc-toolbar-title {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.fc .fc-button {
+  background-color: #ffffff;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-weight: 500;
+}
+
+.fc .fc-button:hover {
+  background-color: rgba(22, 81, 95, 0.08);
+}
+
+.fc .fc-button-primary:not(:disabled).fc-button-active {
+  background-color: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+}
+
+/* Day headers (Mon, Tue...) */
+.fc .fc-col-header-cell-cushion {
+  color: var(--primary);
+  font-weight: 500;
+}
+
+/* Day numbers */
+.fc .fc-daygrid-day-number {
+  color: var(--primary);
+  font-size: 0.85rem;
+}
+
+/* Highlight today */
+.fc .fc-day-today {
+  background-color: rgba(22, 81, 95, 0.08) !important;
+  border-radius: 6px;
+}
+
+/* Events */
+.fc .fc-event {
+  border-radius: 6px;
+  font-size: 0.8rem;
+  padding: 2px 6px;
+  border: 1px solid var(--primary);
+}
+
+.fc .fc-event:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+/* TimeGrid labels (week/day view) */
+.fc .fc-timegrid-slot-label {
+  color: var(--primary);
+  font-size: 0.75rem;
+}
+
+/* Highlight selected cells */
+.fc .fc-highlight {
+  background-color: rgba(22, 81, 95, 0.08);
+}
+
+/* Borders for day cells */
+.fc .fc-daygrid-day {
+  border: 1px solid var(--primary);
+}
+
+/* Event text color */
+.fc .fc-event,
+.fc .fc-event-title,
+.fc .fc-event-time {
+  color: var(--white) !important;
+  font-size: 0.8rem;
+}
